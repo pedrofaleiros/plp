@@ -40,11 +40,11 @@ public:
 		return this->qtd;
 	}
 
-	int getFirst() // retorna o elemento inserido na fila sem removê-lo
+	int getLast() // retorna o elemento inserido na fila sem removê-lo
 	{
 		if (hasElements())
 		{
-			return inicio->getValor();
+			return fim->getValor();
 		}
 		return -1;
 	}

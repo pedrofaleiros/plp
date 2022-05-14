@@ -22,8 +22,8 @@ int main()
 	num != -1 ? printf("\n Numero removido: %d", num) : printf("\n a fila nao possui elementos");
 
 	//c) retornar o elemento inserido na fila, sem removê-lo
-	num = fila.getFirst();
-	num != -1 ? printf("\n Primeiro elemento: %d", num) : printf("\n a fila nao possui elementos");
+	num = fila.getLast();
+	num != -1 ? printf("\n Elemento inserido: %d", num) : printf("\n a fila nao possui elementos");
 
 	//d) retornar o número de elementos inseridos na fila;
 	num = fila.getQtd();
@@ -50,7 +50,7 @@ int main()
 
 	//c) retornar o elemento inserido na pilha, sem removê-lo
 	num = pilha.getTopo();
-	num != -1 ? printf("\n Primeiro elemento: %d", num) : printf("\n a pilha nao possui elementos");
+	num != -1 ? printf("\n Elemento inserido: %d", num) : printf("\n a pilha nao possui elementos");
 
 	//d) retornar o número de elementos inseridos na pilha;
 	num = pilha.getQtd();
