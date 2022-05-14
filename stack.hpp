@@ -1,13 +1,13 @@
-#ifndef PILHA_H
-#define PILHA_H
+#ifndef STACK_H
+#define STACK_H
 
 #include <iostream>
 #include "dequeue.hpp"
 
-class Pilha : public Dequeue
+class Stack : public Dequeue
 {
 public:
-	Pilha(int qtd_max)
+	Stack(int qtd_max)
 	{
 		if (qtd_max > 0)
 		{
@@ -19,7 +19,7 @@ public:
 		}
 	}
 
-	bool push(int num)
+	bool push(int num) // insere um elemento na pilha e retorna sucesso ou falha na operação
 	{
 		if (!listaCheia())
 		{
@@ -29,17 +29,17 @@ public:
 		return false; // falha ao incluir
 	}
 
-	int pop()
+	int pop() //  remove e retorna o elemento inserido na pilha
 	{
 		return removeFinal();
 	}
 
-	int getQtd()
+	int getQtd() // retornar o número de elementos inseridos na pilha
 	{
 		return this->qtd;
 	}
 
-	int getTopo()
+	int getTopo() // retorna o elemento inserido na pilha sem removê-lo
 	{
 		if (hasElements())
 		{
@@ -48,7 +48,7 @@ public:
 		return -1;
 	}
 
-	bool hasElements()
+	bool hasElements() // retorna se há ou não elementos inseridos na pilha
 	{
 		return qtd > 0;
 	}

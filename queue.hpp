@@ -1,14 +1,14 @@
-#ifndef FILA_H
-#define FILA_H
+#ifndef QUEUE_H
+#define QUEUE_H
 
 #include <iostream>
 #include "dequeue.hpp"
 
-class Fila : public Dequeue
+class Queue : public Dequeue
 {
 
 public:
-	Fila(int qtd_max)
+	Queue(int qtd_max)
 	{
 		if (qtd_max > 0)
 		{
@@ -20,7 +20,7 @@ public:
 		}
 	}
 
-	bool insert(int num)
+	bool insert(int num) // insere um elemento na fila e retorna sucesso ou falha na operação
 	{
 		if (!listaCheia())
 		{
@@ -30,17 +30,17 @@ public:
 		return false; // falha ao incluir
 	}
 
-	int remove()
+	int remove() // remove e retorna o elemento inserido na fila
 	{
 		return removeInicio();
 	}
 
-	int getQtd()
+	int getQtd() // retorna o número de elementos inseridos na fila
 	{
 		return this->qtd;
 	}
 
-	int getFirst()
+	int getFirst() // retorna o elemento inserido na fila sem removê-lo
 	{
 		if (hasElements())
 		{
@@ -49,16 +49,7 @@ public:
 		return -1;
 	}
 
-	int getLast()
-	{
-		if (hasElements())
-		{
-			return fim->getValor();
-		}
-		return -1;
-	}
-
-	bool hasElements()
+	bool hasElements() // retorna se há ou não elementos inseridos na fila
 	{
 		return qtd > 0;
 	}
