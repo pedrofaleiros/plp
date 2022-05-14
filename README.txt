@@ -1,10 +1,15 @@
-Postar como solução do exercício um arquivo compactado, 
-contendo todos os arquivos necessários para a execução do mesmo, 
-inclusive, um arquivo denominado README.txt 
-com as instruções de como compilar e executar a solução desenvolvida.
-
-Como compilar no terminal Windows: 
+Como compilar: 
 g++ main.cpp
+
+Para executar no Windows:
 ./a.exe
 
+Para executar no Linux:
+./a.out
 
+Caso nao tenha compilador de C++:
+Pode acessar https://gitpod.io/#github.com/pedrofaleiros/plp
+e entrar usando a conta do GitHub
+Para compilar e executar:
+	g++ main.cpp
+	./a.out
