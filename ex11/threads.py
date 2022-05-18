@@ -19,10 +19,6 @@ def prime(start, stop):
 
 
 print("""
-	Leva muito tempo para apresentar
-	todos os primos entre 0 e 99999
-	Por isso fiz 2 opcoes:
-
 Opcao 1:
 	Apresentar numeros primos
 	entre 0 e 9999,
