@@ -1,17 +1,23 @@
 import threading
+from math import sqrt
 
 def isPrime(num):
-	if num == 1 or num <= 0:
+	if num <= 3:
+		return (not ( num < 2 ))
+
+	if num % 2 == 0 or num % 3 == 0:
 		return False
 
-	cont = 0
-	for i in range(1, num+1):
-		if num % i == 0:
-			cont += 1
-		if cont > 2:
-			return False
+	s = int(sqrt(num))
 
-	return cont == 2
+	for i in range(5, s+1, 4):
+		if num % i == 0:
+			return False
+		i += 2
+		if num % i == 0:
+			return False
+			
+	return True
 
 def prime(start, stop):
 
@@ -19,26 +25,7 @@ def prime(start, stop):
 		if isPrime(i):
 			print(i)
 
-
-print("""
-Opcao 1:
-	Apresentar numeros primos
-	entre 0 e 9999,
-	com uma thread para cada
-	faixa de 1000 valores
-	(Aperte qualquer caractere)
-
-Opcao 2 (Opcao do exercicio): 
-	Apresentar numeros primos 
-	entre 0 ate 99999 
-	(Aperte '2')
-""")
-res = input('Opcao: ')
-
-NUM_MAX = 1000
-if res == '2':
-	NUM_MAX = 10000
-
+NUM_MAX = 10000
 nums = list(map(lambda x: x*NUM_MAX, [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]))
 
 for i in range(0, 10):
